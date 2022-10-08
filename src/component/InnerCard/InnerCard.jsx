@@ -10,10 +10,9 @@ import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import BlockOutlinedIcon from '@mui/icons-material/BlockOutlined';
 import ReportGmailerrorredOutlinedIcon from '@mui/icons-material/ReportGmailerrorredOutlined';
 
-const InnerCard = () => {
+const InnerCard = (props) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
-  console.log(open);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -31,8 +30,8 @@ const InnerCard = () => {
           />
           <div className="person__details">
             <div className="person__details__left">
-              <div className="name">Prashant Srivastava</div>
-              <div className="job__role">Full Stack Developer</div>
+              <div className="name">{props.Username}</div>
+              <div className="job__role">{props.Userprofession}r</div>
             </div>
             <div className="person__details__right">
               <VerifiedIcon className="verified" />
@@ -67,13 +66,11 @@ const InnerCard = () => {
         </div>
       </div>
       <div className="innercard__title">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit?
+        {props.Usertitle}
         <br />
       </div>
       <div className="innercard__description">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus
-        similique culpa, fugit mollitia neque natus amet aperiam repellat,
-        quidem laudantium voluptas tempore molestiae, nostrum impedit.
+        {props.Userdescription}
         <br />
       </div>
       <div className="innercard__footer">

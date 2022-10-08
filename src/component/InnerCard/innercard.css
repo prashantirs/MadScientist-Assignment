@@ -55,7 +55,8 @@
 .innercard__footer{
     display: flex;
     justify-content: space-between;
-    padding-top: -2rem;
+    position: relative;
+    top: 2rem;
 }
 .innercar__footer__left > button{
     margin-left: 1rem;

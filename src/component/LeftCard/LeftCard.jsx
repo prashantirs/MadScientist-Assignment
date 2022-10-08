@@ -7,7 +7,7 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 const LeftCard = () => {
   const [selected1, setSelected1] = useState(false)
   const [selected2, setSelected2] = useState(false)
-  const [selected3, setSelected3] = useState(false)
+  const [selected3, setSelected3] = useState(true)
   const [selected4, setSelected4] = useState(false)
   const handelClick1 = () => {
     setSelected1(!selected1);

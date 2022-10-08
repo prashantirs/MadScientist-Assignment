@@ -16,7 +16,8 @@
 .newbtn{
     display: flex;
     justify-content: space-around;
-}
+    cursor: pointer;
+}  
 .new{
     padding-top: 0.4rem;
 }

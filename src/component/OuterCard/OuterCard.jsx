@@ -3,17 +3,30 @@ import Header from '../Header/Header'
 import InnerCard from '../InnerCard/InnerCard'
 import './OuterCard.css'
 
-const OuterCard = () => {
+const OuterCard = (props) => {
+  const getHandlerOut = (name, profession, title, description) => {
+
+    const data ={
+      Username : name,
+      Userprofession : profession,
+      Usertitle : title,
+      Userdescription : description,
+      id : Math.random()
+  }
+    props.onAddUser(data);
+  }
   return (
     <div className="outercard">
-      <Header/>
+      <Header getSubmitHandlerOut={getHandlerOut}/>
       <div className="cards">
-        <InnerCard/>
-        <InnerCard/>
-        <InnerCard/>
-        <InnerCard/>
-        <InnerCard/>
-        <InnerCard/>
+        {props.data.map((item)=>
+        <InnerCard
+          Username={item.Username}
+          Userprofession={item.Userprofession}
+          Usertitle={item.Usertitle}
+          Userdescription={item.Userdescription}
+          key={Math.random()}
+        />)}
       </div>
     </div>
   )
